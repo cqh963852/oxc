@@ -111,6 +111,10 @@ impl<'a> AstNodes<'a> {
         self.nodes.iter()
     }
 
+    pub fn iter_mut(&mut self) -> impl Iterator<Item = &mut AstNode<'a>> + '_ {
+        self.nodes.iter_mut()
+    }
+
     /// Returns the number of node in this AST.
     #[inline]
     pub fn len(&self) -> usize {
